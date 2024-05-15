@@ -1,0 +1,61 @@
+@import url(global.css);
+
+ul {
+    padding: 0;
+}
+
+.section-register {
+    padding: 2% 8%;
+}
+
+.register-container {
+    padding: 7% 0;
+    width: 100%;
+}
+
+.register-info {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.register-content-items {
+    display: flex;
+    flex-direction: column;
+}
+
+.register-content-items {
+    max-width: 100%;
+}
+
+label {
+    padding: 5px 0;
+}
+
+input {
+    max-width: 100%;
+    margin: 5px 0;
+}
+
+.register-content-items-contact input {
+    width: 49.8%;
+}
+
+.register-content-items-address input {
+    width: 49.8%;
+}
+
+.register-content-items input::placeholder {
+    position: absolute;
+    padding: 4px 0;
+    font-size: 12px;
+    animation: .3s ease;
+}
+
+.alerta-topo {
+    position: absolute; /* Posiciona o alerta de forma absoluta */
+    top: 0; /* Alerta no topo */
+    left: 0; /* Alinhado à esquerda */
+    width: 100%; /* Largura total */
+    z-index: 1000; /* Garante que fique acima de outros elementos */
+    text-align: center; /* Centraliza o texto */
+  }

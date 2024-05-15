@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="../public/css/cadastrarEmpresa.css">
+    <script src="../public/js/characterInput.js"></script>
+    <script src="../public/js/buscaEndereco.js"></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <div>
+        <% if (typeof flash === 'function' && flash('success').length > 0) { %> 
+          <!-- Verifica se flash está definido e tem mensagens -->
+          <div class="alert alert-success">
+            <%= flash('success')[0] %> <!-- Exibe a mensagem flash de sucesso -->
+          </div>
+        <% } %>
+    
+        <% if (typeof flash === 'function' && flash('error').length > 0) { %> 
+          <div class="alert alert-danger">
+            <%= flash('error')[0] %> <!-- Exibe a mensagem flash de erro -->
+          </div>
+        <% } %>
+      </div>
+
+    <div class="menu-sidebar">
+        <nav class="nav-item">
+            <ul>
+                <li><i class="fa-solid fa-user icons"></i><a href="/administrador">Coordenadores</a></li>
+                <li id="actived"><i class="fa-solid fa-building icons"></i><a href="/empresa">Empresas</a></li>
+        </nav>
+        <div class="btn-logout">
+            <a href="login.html"><img src="../public/icon/logout.svg" />Sair</a>
+        </div>
+    </div>
+
+    <div class="form-content">
+        <form method="post">
+            <div class="header-cadastro">
+                <div class="header-cadastro-title">
+                    <a href="/empresa"><i class="fa-solid fa-arrow-left-long backSession"></i></a>
+                    <h2>Cadastrar Empresa</h2>
+                </div>
+    
+                <div class="header-cadastro-btn">
+                    <button type="submit">Cadastrar</button>
+                </div>
+            </div>
+    
+            <section>
+
+                <div class="register-container">
+                    <div class="register-content">
+                        <h3 class="register-info">Dados pessoais</h3>
+                        <div class="register-content-items">
+                            <label for="">Empresa</label>
+                            <input type="text" name="empresa" placeholder="Nome empresa" required>
+                        </div>
+        
+                        <div class="register-content-items">
+                            <label for="">CNPJ</label>
+                            <input type="text" name="cnpj" id="cpnjInput"
+                             required>
+                        </div>
+        
+                        <div class="register-content-items">
+                            <label for="">Contato</label>
+                            <div class="register-content-items-contact">
+                                <input type="text" name="telefone" placeholder="Telefone" required>
+                                <input type="email" name="email" placeholder="Email" required>
+                            </div>
+                        </div>
+        
+                        <div class="register-content-items">
+                            <label for="">Endereço</label>
+                            <div class="register-content-items-address">
+                                <input type="text" name="cep" placeholder="CEP" id="cep" required>
+                                <input type="text" name="cidadeEstado" placeholder="Cidade e Estado" id="cidadeEstado" required>
+                                <input type="text" name="rua" placeholder="Rua" id="rua" required>
+                                <input type="text" name="numeroLocal" placeholder="Nº" id="numeroLocal" required>
+                            </div>
+                        </div>
+
+                        <div class="register-content-items">
+                            <label for="">Endereço</label>
+                            <input type="text" name="responsavelEmpresa" required>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/81de34b60b.js" crossorigin="anonymous"></script>
+</body>
+</html>

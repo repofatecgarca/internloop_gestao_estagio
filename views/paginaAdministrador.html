@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/css/paginaAdministrador.css">
+    <title>Administrador</title>
+</head>
+<body>
+    <div class="menu-sidebar">
+        <nav class="nav-item">
+            <ul>
+                <li id="actived"><i class="fa-solid fa-user icons"></i><a href="/administrador">Coordenadores</a></li>
+                <li><i class="fa-solid fa-building icons"></i><a href="/empresa">Empresas</a></li>
+        </nav>
+        <div class="btn-logout">
+            <a href="login.html"><img src="../public/icon/logout.svg" />Sair</a>
+        </div>
+    </div>
+
+    <section class="section" id="section-adm">
+        <div class="content">
+            <div class="header">
+                <h2>Lista de Coordenadores</h2>
+                <img src="../public/img/logo.png" alt="Logo CPS">
+            </div>
+            <div class="sub-header">
+                <a href="/administrador/cadastrar">Cadastrar</a>
+                <input type="text" placeholder="Pesquisar coordenador">
+            </div>
+
+            <div class="list-coodernadores">
+                <table id="coordenadores-table">
+                    <thead>
+                        <tr>
+                            <th>CPF</th>
+                            <th>Nome</th>
+                            <th>Curso</th>
+                        </tr>
+                    </thead>
+                    <tbody class="teste">
+                        <% coordenadores.forEach(coordenador => { %>
+                            <tr onclick="window.location.href = '/administrador/detalhe/<%= coordenador.id %>'">
+                                <td><%= coordenador.cpf %></td>
+                                <td><%= coordenador.nome %></td>
+                                <td><%= coordenador.cursoResponsavel %></td>
+                                <div class="btnAction">
+                                    <td><a href="/administrador/editar/<%= coordenador.id %>" onclick="editarItem('<%= coordenador.id %>')">Editar</a></td>
+                                    <td><a href="" onclick="excluirItem('<%= coordenador.id %>')">Excluir</a></td>
+                                </div>
+                            </tr>
+                        <% }); %>
+                    </tbody>
+                </table>             
+            </div>
+        </div>
+    </section>
+
+    <script src="https://kit.fontawesome.com/81de34b60b.js" crossorigin="anonymous"></script>
+    <script src="../public/js/uptadeDelete.js"></script>
+</body>
+</html>

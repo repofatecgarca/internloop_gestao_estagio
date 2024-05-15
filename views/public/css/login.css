@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    list-style: none;
+    transition: all .3s ease;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 47% 53%;
+}
+
+.bg {
+    width: 600px;
+}
+
+.form {
+    display: grid;
+    place-content: center;
+    background-color: #E0DEDE;
+    height: 100vh; /* Corrigido: estava "100svh" */
+}
+
+.textLogin {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    border: none;
+    width: 400px;
+    height: 50px;
+    padding: 20px;
+    border-radius: 30px;
+    margin: 10px 0;
+}
+
+button {
+    border: none;
+    border-radius: 35px;
+    background-color: #B30000;
+    color: white;
+    height: 50px;
+    margin: 10px 0;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: #9c0606;
+}
+
+.redefinir {
+    color: #B30000;
+    text-align: center;
+}
+
+.redefinir:hover {
+    color: #9c0606;
+}
+
+/* Adicionado para ocultar o alerta por padrão */
+.d-none {
+    display: none !important;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/css/paginaEmpresa.css">
+    <script src="../public/js/alert.js" defer></script>
+    <title>Administrador</title>
+</head>
+<body>
+    <div class="menu-sidebar">
+        <nav class="nav-item">
+            <ul>
+                <li><i class="fa-solid fa-user icons"></i><a href="/administrador">Coordenadores</a></li>
+                <li id="actived"><i class="fa-solid fa-building icons"></i><a href="/empresa">Empresas</a></li>
+        </nav>
+        <div class="btn-logout">
+            <a href="login.html"><img src="../public/icon/logout.svg" />Sair</a>
+        </div>
+    </div>
+
+    <section class="section">
+        <div class="content">
+            <div class="header">
+                <h2>Lista de Empresas</h2>
+                <img src="../public/img/logo.png" alt="Logo CPS">
+            </div>
+            <div class="sub-header">
+                <a href="/empresa/cadastrar">Cadastrar</a>
+                <input type="text" placeholder="Pesquisar empresa">
+            </div>
+
+            <div class="list-coodernadores">
+                <table id="coordenadores-table">
+                    <thead>
+                        <tr>
+                            <th>Nome empresa</th>
+                            <th>Email</th>
+                            <th>Editar</th>
+                            <th>Excluir</th>
+                        </tr>
+                    </thead>
+                    <tbody class="teste">
+                        <% empresas.forEach(empresa => { %>
+                            <tr>
+                                <td><%= empresa.empresa %></td>
+                                <td><%= empresa.email %></td>
+                                <div class="btnAction">
+                                    <td><a href="">Edit</a></td>
+                                    <td><a href="">Excludir</a></td> 
+                                </div>
+                            </tr>
+                        <% }); %>
+                    </tbody>
+                </table>             
+            </div>
+        </div>
+    </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/81de34b60b.js" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/css/paginaAdministrador.css">
+    <title>Coordenador</title>
+</head>
+<body>
+    <div class="menu-sidebar">
+        <nav class="nav-item">
+            <ul>
+                <li><i class="fa-solid fa-building icons"></i><a href="/notificacao">Notificações</a></li>
+                <li id="actived"><i class="fa-solid fa-user icons"></i><a href="/administrador">Alunos</a></li>
+                <li><i class="fa-solid fa-building icons"></i><a href="/arquivo">Arquivo</a></li>
+        </nav>
+        <div class="btn-logout">
+            <a href="login.html"><img src="../public/icon/logout.svg" />Sair</a>
+        </div>
+    </div>
+
+    <section class="section" id="section-adm">
+        <div class="content">
+            <div class="header">
+                <h2>Lista de Alunos</h2>
+                <img src="../public/img/logo.png" alt="Logo CPS">
+            </div>
+            <div class="sub-header">
+                <a href="/coordenador/cadastrar">Cadastrar</a>
+                <input type="text" placeholder="Pesquisar coordenador">
+            </div>
+
+            <div class="list-alunos">
+                <table id="alunos-table">
+                    <thead>
+                        <tr>
+                            <th>RA</th>
+                            <th>Nome</th>
+                            <th>Termo</th>
+                            <th>Empresa</th>
+                        </tr>
+                    </thead>
+                    <tbody class="teste">
+                        <% alunos.forEach(aluno => { %>
+                                <td><%= aluno.ra %></td>
+                                <td><%= aluno.nome_completo %></td>
+                                <td><%= aluno.id_empresa %></td>
+                            </tr>
+                        <% }); %>
+                    </tbody>
+                </table>             
+            </div>
+        </div>
+    </section>
+
+    <script src="https://kit.fontawesome.com/81de34b60b.js" crossorigin="anonymous"></script>
+    <script src="../public/js/uptadeDelete.js"></script>
+</body>
+</html>

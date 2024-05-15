@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --white: #ffffff;
+    --black: #000000;
+    --menu-color: #666666;
+    --color-primary: #B30000;
+    --color-primary-hover: #940101;
+    --text-color: #404D61;
+
+
+    --fonte-corpo: 'Roboto', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--fonte-corpo);
+    transition: all .3s ease;
+}
+
+li, a {
+    text-decoration: none;
+    list-style: none;
+    color: var(--text-color);
+}
+
+tr {
+    cursor: pointer;
+}
+
+@media screen and (min-width: 1024px) {
+    h2 {
+        font-size: 24px;
+        margin: 0;
+    }
+
+    .menu-sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width:15%;
+        height: 100%;
+        background-color: var(--menu-color);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 10px 0;
+        z-index: 10;
+    }
+
+    .menu-sidebar a {
+        color: #fff;
+    }
+    
+    .nav-item ul {
+        display: grid;
+        gap: 10px;
+    }
+    
+    .nav-item li {
+        padding: 10px 0;
+        font-size: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    #actived {
+        background-color: var(--color-primary);
+        margin: 0 8%;
+        border-radius: 8px;
+    }
+    
+    .icons {
+        color: var(--white);
+        padding-right: 10px;
+    }
+    
+    .btn-logout a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+    }
+    
+    .btn-logout img {
+        width: 12%;
+        color: var(--white);
+    }
+    
+    section {
+        position: absolute;
+        padding: 2% 3%;
+        top: 0;
+        right: 0;
+        width: 85%;
+        height: 100%;
+        background-color: var(--white);
+    }
+    
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 7%;
+    }
+    
+    .sub-header input {
+        border-radius: 50px;
+        height: 40px;
+        width: 35%;
+        padding: 0 15px;
+    }
+    
+    .header img {
+        width: 25%;
+    }
+    
+    button, .sub-header a {
+        padding: 10px 30px;
+        border: none;
+        background-color: var(--color-primary);
+        color: var(--white);
+        font-weight: 600;
+        border-radius: 7px;
+        cursor: pointer;
+    }
+    
+    button:hover, .sub-header a:hover {
+        background-color: var(--color-primary-hover);
+    }
+    
+    .sub-header a {
+        padding: 10px 30px;
+    }
+    
+    .form-cadastro input {
+        width: 90%;
+        height: 35px;
+        border: 0.5px solid gray;
+        border-radius: 10px;
+        padding: 0px 10px;
+    }
+    
+    .form-cadastro form {
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+    
+    .form-item {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .form-item label {
+        padding: 7px;
+    }
+    
+    .section#cadastrar {
+        padding: 0;
+    }
+    
+    .header-cadastro {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 85%;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        height: 65px;
+        padding: 2% 3%;
+        justify-content: space-between;
+        box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.5);
+        z-index: 5;
+    }
+    
+    .header-cadastro-title {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    }
+    
+    .backSession {
+        color: var(--black);
+    }
+    
+    input, select {
+        max-width: 450px;
+        height: 48px;
+        border-radius: 7px;
+        border: 1px solid black;
+        padding: 10px;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    
+    th, td {
+        padding: 10px; /* Espaçamento interno para as células */
+        text-align: left; /* Alinhamento do texto */
+    }
+    
+    td {
+        border-bottom: 1px solid #ddd;
+    }
+
+    .register-document {
+        color: #818181;
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,96 @@
+@import url(global.css);
+
+input {
+    max-width: 100%;
+    width: 100%;
+}
+
+select {
+    width: 100%;
+    max-width: 100%;
+}
+
+.register-content-items {
+    display: flex;
+    flex-direction: column;
+}
+
+.register-content-title {
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px 0 6px 0;
+}
+
+.register-content-items-test {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.image-profile {
+    width: 150px;
+    height: 200px;
+    border-radius: 20px;
+    background-color: blueviolet;
+    position: relative;
+}
+
+.register-container {
+    padding: 7% 10% 0 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.register-content {
+    width: 60%;
+}
+
+.image {
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+    background-color: coral;
+    border-radius: 100px;
+    width: 40px;
+    height: 40px;
+}
+
+.image i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+#telefone::placeholder {
+    position: absolute;
+    font-size: 12px;
+    top: 5px;
+}
+
+#email {
+    width: 400px;
+}
+
+#email::placeholder {
+    position: absolute;
+    right: 10px;
+}
+
+.items-stage {
+    display: grid;
+    gap: 15px;
+    width: 100%;
+}
+
+.items-stage-container {
+    display: flex;
+    gap: 15px;
+}

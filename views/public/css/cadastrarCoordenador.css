@@ -1,0 +1,77 @@
+@import url(global.css);
+
+ul {
+    padding: 0;
+}
+
+.section-register {
+    padding: 2% 8%;
+}
+
+.register-container {
+    padding: 7% 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.register-info {
+    font-size: 20px;
+    font-weight: 700;
+    
+}
+
+.register-content-items {
+    display: flex;
+    flex-direction: column;
+}
+
+.register-content-items input::placeholder {
+    position: absolute;
+    padding: 4px 10px;
+    font-size: 10px;
+    animation: .3s ease;
+}
+
+.register-container-input {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.cpfInput::placeholder {
+    position: absolute;
+
+    right: 0;
+}
+
+.register-content-title {
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px 0 6px 0;
+}
+
+.image-profile {
+    width: 150px;
+    height: 200px;
+    border-radius: 20px;
+    background-color: blueviolet;
+    position: relative;
+}
+
+.image {
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+    background-color: coral;
+    border-radius: 100px;
+    width: 40px;
+    height: 40px;
+}
+
+.image i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
