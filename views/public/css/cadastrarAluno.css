@@ -94,3 +94,8 @@ select {
     display: flex;
     gap: 15px;
 }
+
+.register-document {
+    color: #818181;
+    font-size: 12px;
+}

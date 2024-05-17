@@ -4,10 +4,9 @@
     --white: #ffffff;
     --black: #000000;
     --menu-color: #666666;
-    --color-primary: #B30000;
+    --color-primary: #B30006;
     --color-primary-hover: #940101;
     --text-color: #404D61;
-
 
     --fonte-corpo: 'Roboto', sans-serif;
 }
@@ -201,16 +200,11 @@ tr {
     }
     
     th, td {
-        padding: 10px; /* Espaçamento interno para as células */
-        text-align: left; /* Alinhamento do texto */
+        padding: 10px;
+        text-align: left;
     }
     
     td {
         border-bottom: 1px solid #ddd;
-    }
-
-    .register-document {
-        color: #818181;
-        font-size: 12px;
     }
 }
